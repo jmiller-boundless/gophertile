@@ -8,10 +8,12 @@ import (
 	"strconv"
 )
 
+
+
 func main() {
 	argsWithoutProg := os.Args[1:]
 	if len(argsWithoutProg) == 3 && IsInt(argsWithoutProg[0]) && IsInt(argsWithoutProg[1]) && IsInt(argsWithoutProg[2]) {
-		x, err := strconv.Atoi(argsWithoutProg[1])
+		x, err := strconv.Atoi(argsWithoutProg[0])
 		y, err := strconv.Atoi(argsWithoutProg[1])
 		z, err := strconv.Atoi(argsWithoutProg[2])
 		tile := gophertile.Tile{x, y, z}
